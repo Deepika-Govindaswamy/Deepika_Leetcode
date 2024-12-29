@@ -7,7 +7,6 @@ class Solution {
         int p = 0, t = 0, count = 0;
         while (p < players.length && t < trainers.length){
             if (players[p] <= trainers[t]){
-                System.out.println("p "+ p);
                 count++;
                 p++;
                 t++;

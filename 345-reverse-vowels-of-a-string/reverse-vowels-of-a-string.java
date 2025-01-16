@@ -3,8 +3,7 @@ class Solution {
         
         int start = 0, end = s.length()-1;
         char[] letters = s.toCharArray();
-        String res = "";
-
+        
         while (start < end){
 
             if ( isVowel (letters[start]) && isVowel (letters[end]) ){
@@ -24,11 +23,7 @@ class Solution {
         }
 
 
-        for (char i : letters){
-            res += Character.toString(i);
-        }
-
-        return res;
+        return new String(letters);
     }
 
     public boolean isVowel (char ch) {

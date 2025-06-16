@@ -10,16 +10,9 @@ class Solution {
 
         int last = prefix.length - 1;
         for (int i = 1; i <= last; i++) {
+            
             // check if sum(0,i-1) == sum(i+1, last)
-
-            int lhs = prefix [i-1];
-            int rhs = prefix[last] - prefix[i];
-
-
-            System.out.println (lhs);
-            System.out.println (rhs);
-
-            if (lhs == rhs) {
+            if (prefix [i-1] == prefix[last] - prefix[i]){
                 return i-1;
             } 
         }

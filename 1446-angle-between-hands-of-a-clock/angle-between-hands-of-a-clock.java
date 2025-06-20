@@ -13,8 +13,6 @@ class Solution {
         // the degree hours had moved by the time minutes hand covered minutes degree
         double hoursMovedInMinutes = ((double) minutes/60) * 30;
 
-        System.out.println (hoursMoved + " " + minutesMoved + " " + hoursMovedInMinutes);
-
         double degree = Math.abs (hoursMoved - minutesMoved);
         if (degree <= 0 || minutesPosition < hour){
 

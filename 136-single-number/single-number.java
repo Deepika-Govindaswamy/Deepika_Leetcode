@@ -1,25 +1,22 @@
 class Solution {
     public int singleNumber(int[] nums) {
         
-        if (nums.length == 1) return nums[0];
+        if (nums.length == 1) {
+            return nums[0];
+        }
 
         Arrays.sort(nums);
-        int i = 0, res = 0;
 
-        while (i < nums.length - 1){
-            if (nums[i] == nums[i+1]){
-                i += 2;
-            }
-            else{
-                res = nums[i];
-                break;
+        if (nums[0] != nums[1]) {
+            return nums[0];
+        }
+
+        for (int i = 1; i < nums.length - 1; i++) {
+            if (nums[i-1] != nums[i] && nums[i+1] != nums[i]) {
+                return nums[i];
             }
         }
 
-        if (i == nums.length - 1 && nums[i] != nums[i-1]){
-            res = nums[i];
-        }
-
-        return res;
+        return nums[nums.length-1];
     }
 }

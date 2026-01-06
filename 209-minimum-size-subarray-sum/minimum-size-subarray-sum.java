@@ -19,8 +19,6 @@ class Solution {
             }
         }
 
-        length = (length == Integer.MAX_VALUE) ? 0 : length;
-
-        return length;
+        return (length == Integer.MAX_VALUE) ? 0 : length;
     }
 }
